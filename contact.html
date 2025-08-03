@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Gideon Duah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f8fb; margin: 0; padding: 0; }
+        header { background: linear-gradient(90deg, hwb(300 14% 9%), #FFA500); color: #fff; padding: 40px 0; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        nav { background: #388E3C; display: flex; justify-content: center; }
+        nav a { color: #fff; text-decoration: none; padding: 14px 20px; display: block; }
+        nav a:hover { background: #2E7D32; }
+        .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px #ccc; }
+        h2 { color: #4CAF50; }
+        .contact-info { font-size: 1.1rem; margin-bottom: 20px; }
+        .contact-form { max-width: 400px; margin: 0 auto; }
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem;
+        }
+        .contact-form button {
+            background: #4CAF50; color: #fff; border: none; padding: 12px 30px; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: linear-gradient(90deg, #FFA500, #4CAF50); color: #222;
+        }
+        footer { background: #4CAF50; color: hsl(136, 79%, 62%); text-align: center; padding: 10px 0; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+    <nav>
+        <a href="registration.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+    </nav>
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:gideonduah@gmail.com">duahgideon55@gmail.com</a></p>
+            <p>Phone: +233-245-987-533</p>
+            <p>Location: Kumasi, Ghana</p>
+        </div>
+       <form class="contact-form" onsubmit="return sendMail();">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+<script>
+function sendMail() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    var subject = encodeURIComponent('Message from ' + name);
+    var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+    window.location.href = "mailto:gideonduah@example.com?subject=" + subject + "&body=" + body;
+    return false; // Prevent actual form submission
+}
+</script>
+    </div>
+    <footer>
+        <p>&copy; 2025 Gideon Duah. All rights reserved.</p>
+    </footer>
+</body>
+</html>

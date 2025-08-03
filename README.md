@@ -1,1 +1,1 @@
-# Ntiamoah-website
+# Gideon Duah
